@@ -1,3 +1,20 @@
+const container = document.querySelector('#display')
+const buttons = document.querySelectorAll('.button')
+const clear = document.querySelector('.clear')
+
+
+buttons.forEach(button => button.addEventListener('click', () =>{
+    let value = button.textContent
+    let textNode = document.createTextNode(value)
+    let spaceNode = document.createTextNode(' ')
+
+    container.appendChild(textNode)
+    container.appendChild(spaceNode)
+
+
+}))
+
+
 function add(x,y){
     return x + y
 }
@@ -29,8 +46,8 @@ function operate(x, operator, y){
 }
 
 
+
 let Num1 = 1
 let Operator = '+'
 let Num2 = 3
 
-console.log(operate(Num1,Operator,Num2))
